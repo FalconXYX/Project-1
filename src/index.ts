@@ -1,21 +1,20 @@
-/* let */
-var funcs = [];
-for (let i = 0; i < 5; i += 1) {
-  funcs.push(function () {
-    console.log(i);
-  });
+function main() {
+  let posarray = [];
+
+  posarray.push(picknext());
+  for (let i = posarray.length; i > 0; i--) {
+    let inputnum = getinput();
+    if (inputnum != posarray[i]) {
+      return false;
+    }
+  }
 }
-funcs.forEach(function (func) {
-  func();
-});
-("use strict");
 
-let fname = "Asim";
-
-let multi = `hello
-world
-my
-name
-is
-${fname}`;
-console.log(multi);
+function picknext() {
+  let i = Math.floor(Math.random() * 4) + 1;
+  return i;
+}
+function getinput() {
+  let num = 0;
+  return num;
+}
